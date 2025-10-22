@@ -1,0 +1,16 @@
+name: github action code demo 
+on:
+    push:
+        branches:
+            . main
+
+jobs:
+    demo-job:
+       runs-on : ubuntu-latest
+
+
+       steps:
+           - name: checkout code
+             uses: action/checkout@v2
+             -name: print message
+             runs: echo "welcome to github action"
